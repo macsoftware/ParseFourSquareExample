@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddPlaceVC: UIViewController {
+class AddPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     @IBOutlet weak var placeNameText: UITextField!
@@ -20,12 +20,46 @@ class AddPlaceVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        imageView.isUserInteractionEnabled = true
+        let gestureRegogniser = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
+        imageView.addGestureRecognizer(gestureRegogniser)
+        
     }
     
+    @objc func chooseImage(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        self.present(picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        imageView.image = info[.originalImage] as? UIImage
+        self.dismiss(animated: true)
+        
+    }
 
     @IBAction func nextButtonClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMapVC", sender: nil)
+        
+        if placeNameText.text != "" && placeTypeText.text != "" && atmosphereText.text != "" {
+            if let chosenImage = imageView.image {
+                PlaceModel.sharedInstance.placeName = placeNameText.text!
+                PlaceModel.sharedInstance.placeType = placeTypeText.text!
+                PlaceModel.sharedInstance.placeAtmosphere = atmosphereText.text!
+                PlaceModel.sharedInstance.placeImage = chosenImage
+            }
+            self.performSegue(withIdentifier: "toMapVC", sender: nil)
+        }else{
+            let alert = UIAlertController(title: "Error", message: "Enter a place name, type & atmosphere!", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(okButton)
+            self.present(alert, animated: true)
+            
+            
+        }
+        
     }
     
 }

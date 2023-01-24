@@ -17,6 +17,7 @@
 		886B7600297F049D00EB1F98 /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B75FF297F049D00EB1F98 /* AddPlaceVC.swift */; };
 		886B7602297F08F200EB1F98 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B7601297F08F200EB1F98 /* MapVC.swift */; };
 		886B7604297F0D1700EB1F98 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B7603297F0D1700EB1F98 /* DetailsVC.swift */; };
+		886B7606297F112500EB1F98 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B7605297F112500EB1F98 /* PlaceModel.swift */; };
 		8E34AAD71A7300A0CA12529A /* Pods_ParseFourSquareExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8E2695A5399F645E15B370 /* Pods_ParseFourSquareExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		886B75FF297F049D00EB1F98 /* AddPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
 		886B7601297F08F200EB1F98 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		886B7603297F0D1700EB1F98 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		886B7605297F112500EB1F98 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				886B7601297F08F200EB1F98 /* MapVC.swift */,
 				886B7603297F0D1700EB1F98 /* DetailsVC.swift */,
 				8822397A297ADE68009C8668 /* Main.storyboard */,
+				886B7605297F112500EB1F98 /* PlaceModel.swift */,
 				8822397D297ADE6A009C8668 /* Assets.xcassets */,
 				8822397F297ADE6A009C8668 /* LaunchScreen.storyboard */,
 				88223982297ADE6A009C8668 /* Info.plist */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88223979297ADE68009C8668 /* SignInVC.swift in Sources */,
+				886B7606297F112500EB1F98 /* PlaceModel.swift in Sources */,
 				886B7602297F08F200EB1F98 /* MapVC.swift in Sources */,
 				88223975297ADE68009C8668 /* AppDelegate.swift in Sources */,
 				886B75FE297EFE3100EB1F98 /* PlacesVC.swift in Sources */,

@@ -307,6 +307,7 @@
                     <navigationItem key="navigationItem" id="P4H-f9-AGA"/>
                     <connections>
                         <outlet property="mapView" destination="Ccj-uL-UbO" id="teJ-uN-Pt7"/>
+                        <segue destination="L5z-Xc-VLs" kind="presentation" identifier="fromMapVCtoPlacesVC" modalPresentationStyle="fullScreen" id="iEm-8b-lFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Pc-Z8-tLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -352,6 +353,9 @@
             <point key="canvasLocation" x="4214.5038167938928" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iEm-8b-lFv"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="tap-to-select" width="750" height="750"/>
         <systemColor name="systemBackgroundColor">
